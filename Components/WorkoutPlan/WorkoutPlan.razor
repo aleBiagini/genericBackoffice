@@ -1,0 +1,16 @@
+﻿@page "/WorkoutPlan"
+
+@using Microsoft.AspNetCore.Authorization
+
+@attribute [Authorize]
+
+<PageTitle>Workout Plan</PageTitle>
+
+<AuthorizeView>
+    Ciao @context.User.Identity?.Name!
+</AuthorizeView>
+
+
+@code {
+
+}

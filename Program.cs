@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using GenericBackoffice.Components;
 using GenericBackoffice.Components.Account;
 using GenericBackoffice.Data;
+using GenericBackoffice.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +35,8 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddDefaultTokenProviders();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
+
+builder.Services.AddSingleton<TranslationService>();
 
 var app = builder.Build();
 

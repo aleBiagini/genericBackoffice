@@ -19,4 +19,12 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.0" />
   </ItemGroup>
 
+   <ItemGroup>
+    <Watch Include="**\*.razor" />
+  </ItemGroup>
+
+   <ItemGroup>
+     <Watch Remove="Components\WorkoutPlan\WorkoutPlan.razor" />
+   </ItemGroup>
+
 </Project>
